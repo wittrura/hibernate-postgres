@@ -1,0 +1,20 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- sql dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+
+        <!-- connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernate</property>
+
+        <!-- create db schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- show queries prepared by hibernate -->
+        <property name="show_sql">true</property>
+
+        <!-- names the annotated entity classes -->
+        <mapping class="com.ryanwittrup.contactmgr.model.Contact"/>
+
+    </session-factory>
+</hibernate-configuration>
